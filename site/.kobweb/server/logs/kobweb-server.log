@@ -1,7 +1,7 @@
-2024-01-07 20:44:47.909 [main] DEBUG ktor.application - Java Home: /Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents
-2024-01-07 20:44:47.911 [main] DEBUG ktor.application - Class Loader: jdk.internal.loader.ClassLoaders$AppClassLoader@22d8cfe0: [file:/Users/bigmeco/IdeaProjects/websiteResume/site/.kobweb/server/server.jar!/ch]
-2024-01-07 20:44:47.921 [main] WARN  ktor.application - API jar specified but does not exist! Please fix conf.yaml. Invalid path: "build/libs/website.jar"
-2024-01-07 20:44:47.948 [main] INFO  ktor.application - Application started in 0.07 seconds.
-2024-01-07 20:44:48.024 [main] INFO  ktor.application - Responding at http://0.0.0.0:8080
-2024-01-07 20:45:00.204 [kotlinx.coroutines.DefaultExecutor] INFO  ktor.application - Kobweb server shutting down...
-2024-01-07 20:45:02.305 [kotlinx.coroutines.DefaultExecutor] INFO  ktor.application - Server finished shutting down.
+2024-01-07 21:24:55.770 [main] DEBUG ktor.application - Java Home: /Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents
+2024-01-07 21:24:55.771 [main] DEBUG ktor.application - Class Loader: jdk.internal.loader.ClassLoaders$AppClassLoader@22d8cfe0: [file:/Users/bigmeco/IdeaProjects/websiteResume/site/.kobweb/server/server.jar!/ch]
+2024-01-07 21:24:55.780 [main] WARN  ktor.application - API jar specified but does not exist! Please fix conf.yaml. Invalid path: "build/libs/website.jar"
+2024-01-07 21:24:55.801 [main] INFO  ktor.application - Application started in 0.061 seconds.
+2024-01-07 21:24:55.866 [main] INFO  ktor.application - Responding at http://0.0.0.0:8080
+2024-01-07 21:25:10.747 [kotlinx.coroutines.DefaultExecutor] INFO  ktor.application - Kobweb server shutting down...
+2024-01-07 21:25:12.830 [kotlinx.coroutines.DefaultExecutor] INFO  ktor.application - Server finished shutting down.

@@ -5,7 +5,7 @@ plugins {
     alias(libs.plugins.kotlin.multiplatform)
     alias(libs.plugins.jetbrains.compose)
     alias(libs.plugins.kobweb.application)
-    // alias(libs.plugins.kobwebx.markdown)
+     alias(libs.plugins.kobwebx.markdown)
 }
 
 group = "com.bigmeco.website"
@@ -16,9 +16,6 @@ kobweb {
         index {
             description.set("Powered by Kobweb")
 
-            head.add {
-                link(rel = "stylesheet", href = "/fonts/faces.css")
-            }
         }
     }
 }
