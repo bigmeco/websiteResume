@@ -65,6 +65,11 @@ fun TitleSide(
                 .height(4.px)
                 .width(400.px)
                 .margin(bottom = 24.px)
+                .boxShadow(
+                    color = (Res.Theme.ROOT.color).toRgb().copy(alpha = 30),
+                    blurRadius = 4.px,
+                    spreadRadius = 4.px
+                )
                 .borderRadius(r = Res.Dimens.BORDER_RADIUS.px)
                 .background(Res.Theme.ROOT.color)
                 .align(
@@ -77,7 +82,7 @@ fun TitleSide(
                 .fontFamily(Res.String.ROBOTO_REGULAR)
                 .fontSize(14.px)
                 .color( Colors.White)
-                .opacity(50.percent)
+                .opacity(80.percent)
                 .lineHeight(2)
                 .margin(bottom = 36.px)
                 .textAlign(

@@ -27,6 +27,11 @@ fun ProfileCard() {
         modifier = Modifier
             .background(Res.Theme.ROOT.color)
             .borderRadius(r = Res.Dimens.BORDER_RADIUS_GREEN.px)
+            .boxShadow(
+                color = (Res.Theme.ROOT.color).toRgb().copy(alpha = 40),
+                blurRadius = 6.px,
+                spreadRadius = 6.px
+            )
             .border(8.px, Solid, Res.Theme.ROOT.color)
     ) {
         SimpleGrid(

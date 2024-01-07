@@ -6,6 +6,7 @@ import com.bigmeco.website.components.ProfileCard
 import com.bigmeco.website.util.Res
 import com.varabyte.kobweb.compose.css.functions.radialGradient
 import com.varabyte.kobweb.compose.foundation.layout.Box
+import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.backgroundImage
@@ -44,7 +45,10 @@ fun HomePage() {
             Pair("https://play-lh.googleusercontent.com/hjI3Cbsy88nxp-2u4s5oRJxqLFKM2t4h3Dhv7CR9_q6pMGm5WHkh8yPjBLyt7xjhI4A","https://apkcombo.com/ru/смартнарод-умный-дом/com.smartnarod/"),
 
         ),100.0,100.0,6.0,6.0)
-        ProfileCard()
+        Column {
+            ProfileCard()
+
+        }
     }
 }
 
