@@ -9,6 +9,7 @@ import com.varabyte.kobweb.compose.css.TextAlign
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.foundation.layout.Row
+import com.varabyte.kobweb.compose.foundation.layout.Spacer
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.graphics.Colors
@@ -55,14 +56,16 @@ fun TitleSide(
             modifier = Modifier
                 .margin(bottom = 24.px)
                 .fontFamily(Res.String.ROBOTO_REGULAR)
+                .fontWeight(FontWeight.Normal)
                 .color(Colors.White)
                 .fontSize(18.px)
         )
         Surface(
             modifier = Modifier
                 .height(4.px)
-                .width(40.px)
+                .width(400.px)
                 .margin(bottom = 24.px)
+                .borderRadius(r = Res.Dimens.BORDER_RADIUS.px)
                 .background(Res.Theme.ROOT.color)
                 .align(
                     if (breakpoint <= Breakpoint.SM) Alignment.CenterHorizontally
@@ -83,34 +86,15 @@ fun TitleSide(
                 ),
             text = Res.String.ABOUT_ME
         )
-        Button(
-            modifier = ButtonStyle.toModifier()
-                .margin(bottom = 50.px),
-            size = ButtonSize.LG,
-            onClick = { window.location.href = Res.String.MY_EMAIL }
-        ) {
-            Image(
-                modifier = Modifier.margin(right = 12.px),
-                src = Res.Icon.EMAIL)
-            SpanText(
-                modifier = Modifier
-                    .fontSize(14.px)
-                    .color(Res.Theme.ROOT.color)
-                    .fontWeight(FontWeight.Bold)
-                    .fontFamily(Res.String.ROBOTO_REGULAR),
-                text = Res.String.BUTTON_TEXT
-            )
-        }
+
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .gap(12.px),
+                .gap(15.px),
             horizontalArrangement = if (breakpoint <= Breakpoint.SM)
                 Arrangement.Center else Arrangement.Start
         ) {
-            SocialIcon.entries.filter {
-                it.name.contains("Light")
-            }.forEach {
+            SocialIcon.entries.forEach {
                 IconButton(
                     modifier = SocialIconStyle.toModifier(),
                     icon = it.icon,

@@ -26,7 +26,7 @@ fun IconButton(
     Link(path = link) {
         Box(
             modifier = modifier
-                .padding(all = 8.px)
+                .padding(all = 10.px)
                 .borderRadius(r = BORDER_RADIUS.px)
                 .cursor(Cursor.Pointer)
                 .border(
@@ -48,18 +48,24 @@ enum class SocialIcon(
     val icon: String,
     val link: String
 ) {
+    Email(
+        icon = Res.Icon.EMAIL,
+        link = "bigmecoprog@gmail.com"
+    ),
     Github(
         icon = Res.Icon.GITHUB,
-        link = "https://github.com/stevdza-san"
+        link = "https://github.com/bigmeco"
     ),
-
-    Gitlab(
-        icon = Res.Icon.GITLAB,
-        link = "https://gitlab.com"
-    ),
-
     Instagram(
         icon = Res.Icon.INSTAGRAM,
-        link = "https://www.instagram.com/bigmeco"
+        link = "https://www.instagram.com/bigmecoo"
+    ),
+    Linkedin(
+        icon = Res.Icon.LINKEDIN,
+        link = "https://www.linkedin.com/in/nikolay-ilin-186304140/"
+    ),
+    Telegram(
+        icon = Res.Icon.TELEGRAM,
+        link = "https://t.me/bigmeco"
     )
 }
