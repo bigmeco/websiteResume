@@ -8,7 +8,7 @@ plugins {
     // alias(libs.plugins.kobwebx.markdown)
 }
 
-group = "com.stevdza_san.website"
+group = "com.bigmeco.website"
 version = "1.0-SNAPSHOT"
 
 kobweb {
@@ -39,7 +39,6 @@ kotlin {
                 implementation(libs.kobweb.core)
                 implementation(libs.kobweb.silk)
                 implementation(libs.silk.icons.fa)
-                // implementation(libs.kobwebx.markdown)
             }
         }
     }

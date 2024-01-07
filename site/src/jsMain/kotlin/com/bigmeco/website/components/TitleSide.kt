@@ -1,9 +1,9 @@
-package com.stevdza_san.website.components
+package com.bigmeco.website.components
 
 import androidx.compose.runtime.Composable
-import com.stevdza_san.website.styles.ButtonStyle
-import com.stevdza_san.website.styles.SocialIconStyle
-import com.stevdza_san.website.util.Res
+import com.bigmeco.website.styles.ButtonStyle
+import com.bigmeco.website.styles.SocialIconStyle
+import com.bigmeco.website.util.Res
 import com.varabyte.kobweb.compose.css.FontWeight
 import com.varabyte.kobweb.compose.css.TextAlign
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
@@ -26,8 +26,7 @@ import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
 
 @Composable
-fun LeftSide(
-    colorMode: ColorMode,
+fun TitleSide(
     breakpoint: Breakpoint
 ) {
     Column(
@@ -43,7 +42,7 @@ fun LeftSide(
             modifier = Modifier
                 .margin(bottom = 12.px)
                 .fontFamily(Res.String.ROBOTO_CONDENSED)
-                .color(if (colorMode.isLight) Colors.Black else Colors.White)
+                .color(Res.Theme.ROOT.color)
                 .fontSize(50.px)
                 .fontWeight(FontWeight.Bold)
                 .textAlign(
@@ -56,7 +55,7 @@ fun LeftSide(
             modifier = Modifier
                 .margin(bottom = 24.px)
                 .fontFamily(Res.String.ROBOTO_REGULAR)
-                .color(if (colorMode.isLight) Colors.Black else Colors.White)
+                .color(Colors.White)
                 .fontSize(18.px)
         )
         Surface(
@@ -64,10 +63,7 @@ fun LeftSide(
                 .height(4.px)
                 .width(40.px)
                 .margin(bottom = 24.px)
-                .background(
-                    if (colorMode.isLight) Res.Theme.BLUE.color
-                    else Res.Theme.LIGHT_BLUE.color
-                )
+                .background(Res.Theme.ROOT.color)
                 .align(
                     if (breakpoint <= Breakpoint.SM) Alignment.CenterHorizontally
                     else Alignment.Start
@@ -77,7 +73,7 @@ fun LeftSide(
             modifier = Modifier
                 .fontFamily(Res.String.ROBOTO_REGULAR)
                 .fontSize(14.px)
-                .color(if (colorMode.isLight) Colors.Black else Colors.White)
+                .color( Colors.White)
                 .opacity(50.percent)
                 .lineHeight(2)
                 .margin(bottom = 36.px)
@@ -95,16 +91,11 @@ fun LeftSide(
         ) {
             Image(
                 modifier = Modifier.margin(right = 12.px),
-                src = if (colorMode.isLight) Res.Icon.EMAIL_LIGHT
-                else Res.Icon.EMAIL_DARK
-            )
+                src = Res.Icon.EMAIL)
             SpanText(
                 modifier = Modifier
                     .fontSize(14.px)
-                    .color(
-                        if (colorMode.isLight) Colors.White
-                        else Res.Theme.GRADIENT_ONE_DARK.color
-                    )
+                    .color(Res.Theme.ROOT.color)
                     .fontWeight(FontWeight.Bold)
                     .fontFamily(Res.String.ROBOTO_REGULAR),
                 text = Res.String.BUTTON_TEXT
@@ -118,12 +109,10 @@ fun LeftSide(
                 Arrangement.Center else Arrangement.Start
         ) {
             SocialIcon.entries.filter {
-                if (colorMode.isLight) !it.name.contains("Light")
-                else it.name.contains("Light")
+                it.name.contains("Light")
             }.forEach {
                 IconButton(
                     modifier = SocialIconStyle.toModifier(),
-                    colorMode = colorMode,
                     icon = it.icon,
                     link = it.link
                 )

@@ -1,7 +1,7 @@
-package com.stevdza_san.website
+package com.bigmeco.website
 
 import androidx.compose.runtime.*
-import com.stevdza_san.website.util.Res
+import com.bigmeco.website.util.Res
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.core.App
 import com.varabyte.kobweb.silk.SilkApp
@@ -37,9 +37,9 @@ fun overrideSilkTheme(context: InitSilkContext) {
 
             dark.apply {
                 button.apply {
-                    default = Res.Theme.LIGHT_BLUE.color
-                    hover = Res.Theme.LIGHT_BLUE.color
-                    pressed = Res.Theme.LIGHT_BLUE.color
+                    default = Res.Theme.BLUE.color
+                    hover = Res.Theme.BLUE.color
+                    pressed = Res.Theme.BLUE.color
                 }
             }
         }

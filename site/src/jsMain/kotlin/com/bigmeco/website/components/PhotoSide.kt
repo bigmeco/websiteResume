@@ -1,21 +1,18 @@
-package com.stevdza_san.website.components
+package com.bigmeco.website.components
 
 import androidx.compose.runtime.Composable
-import com.stevdza_san.website.util.Res
+import com.bigmeco.website.util.Res
 import com.varabyte.kobweb.compose.css.ObjectFit
 import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.ui.Modifier
-import com.varabyte.kobweb.compose.ui.modifiers.fillMaxSize
-import com.varabyte.kobweb.compose.ui.modifiers.fillMaxWidth
-import com.varabyte.kobweb.compose.ui.modifiers.height
-import com.varabyte.kobweb.compose.ui.modifiers.objectFit
+import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.compose.ui.thenIf
 import com.varabyte.kobweb.silk.components.graphics.Image
 import com.varabyte.kobweb.silk.components.style.breakpoint.Breakpoint
 import org.jetbrains.compose.web.css.px
 
 @Composable
-fun RightSide(breakpoint: Breakpoint) {
+fun PhotoSide(breakpoint: Breakpoint) {
     Box(
         modifier = Modifier
             .fillMaxWidth()
@@ -27,7 +24,8 @@ fun RightSide(breakpoint: Breakpoint) {
         Image(
             modifier = Modifier
                 .fillMaxSize()
-                .objectFit(ObjectFit.Cover),
+                .objectFit(ObjectFit.Cover)
+                .borderRadius(r = Res.Dimens.PHOTO_RADIUS.px),
             src = Res.Image.PROFILE_PHOTO
         )
     }

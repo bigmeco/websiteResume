@@ -1,8 +1,8 @@
-package com.stevdza_san.website.components
+package com.bigmeco.website.components
 
 import androidx.compose.runtime.Composable
-import com.stevdza_san.website.util.Res
-import com.stevdza_san.website.util.Res.Dimens.BORDER_RADIUS
+import com.bigmeco.website.util.Res
+import com.bigmeco.website.util.Res.Dimens.BORDER_RADIUS
 import com.varabyte.kobweb.compose.css.Cursor
 import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.ui.Modifier
@@ -18,7 +18,6 @@ import org.jetbrains.compose.web.css.px
 @Composable
 fun IconButton(
     modifier: Modifier = Modifier,
-    colorMode: ColorMode,
     link: String = "",
     icon: String,
     iconSize: CSSSizeValue<CSSUnit.px> = Res.Dimens.ICON_SIZE.px,
@@ -33,8 +32,7 @@ fun IconButton(
                 .border(
                     width = 1.px,
                     style = LineStyle.Solid,
-                    color = if (colorMode.isLight) Res.Theme.SOCIAL_ICON_BACKGROUND_LIGHT.color
-                    else Res.Theme.SOCIAL_ICON_BACKGROUND_DARK.color
+                    color = Res.Theme.SOCIAL_ICON_BACKGROUND.color
                 )
                 .onClick { onClick?.invoke() }
         ){
@@ -54,24 +52,14 @@ enum class SocialIcon(
         icon = Res.Icon.GITHUB,
         link = "https://github.com/stevdza-san"
     ),
-    GithubLight(
-        icon = Res.Icon.GITHUB_LIGHT,
-        link = "https://github.com/stevdza-san"
-    ),
+
     Gitlab(
         icon = Res.Icon.GITLAB,
         link = "https://gitlab.com"
     ),
-    GitlabLight(
-        icon = Res.Icon.GITLAB_LIGHT,
-        link = "https://gitlab.com"
-    ),
+
     Instagram(
         icon = Res.Icon.INSTAGRAM,
-        link = "https://www.instagram.com/stevdza_san"
-    ),
-    InstagramLight(
-        icon = Res.Icon.INSTAGRAM_LIGHT,
-        link = "https://www.instagram.com/stevdza_san"
+        link = "https://www.instagram.com/bigmeco"
     )
 }

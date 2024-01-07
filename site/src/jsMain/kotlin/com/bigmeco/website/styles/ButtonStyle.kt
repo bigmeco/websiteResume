@@ -1,4 +1,4 @@
-package com.stevdza_san.website.styles
+package com.bigmeco.website.styles
 
 import com.varabyte.kobweb.compose.css.CSSTransition
 import com.varabyte.kobweb.compose.css.TransitionProperty

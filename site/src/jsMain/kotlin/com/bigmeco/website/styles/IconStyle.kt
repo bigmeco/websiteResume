@@ -1,6 +1,6 @@
-package com.stevdza_san.website.styles
+package com.bigmeco.website.styles
 
-import com.stevdza_san.website.util.Res
+import com.bigmeco.website.util.Res
 import com.varabyte.kobweb.compose.css.CSSTransition
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.graphics.Colors
@@ -25,30 +25,6 @@ val SocialIconStyle by ComponentStyle {
     hover {
         Modifier
             .rotate(10.deg)
-            .background(
-                if (colorMode.isLight) Res.Theme.SOCIAL_ICON_BACKGROUND_LIGHT.color
-                else Res.Theme.SOCIAL_ICON_BACKGROUND_DARK.color
-            )
-    }
-}
-
-val ThemeIconStyle by ComponentStyle {
-    base {
-        Modifier
-            .background(
-                if (colorMode.isLight) Colors.White
-                else Res.Theme.DARK_BLUE.color
-            )
-            .transition(
-                CSSTransition(property = "background", duration = 300.ms)
-            )
-    }
-
-    hover {
-        Modifier
-            .background(
-                if (colorMode.isLight) Res.Theme.SOCIAL_ICON_BACKGROUND_LIGHT.color
-                else Res.Theme.SOCIAL_ICON_BACKGROUND_DARK.color
-            )
+            .background(Res.Theme.SOCIAL_ICON_BACKGROUND.color)
     }
 }
