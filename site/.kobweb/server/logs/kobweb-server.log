@@ -1,12 +1,7 @@
-2024-01-07 19:15:11.502 [main] DEBUG ktor.application - Java Home: /Library/Java/JavaVirtualMachines/jdk-17.0.1.jdk/Contents
-2024-01-07 19:15:11.503 [main] DEBUG ktor.application - Class Loader: jdk.internal.loader.ClassLoaders$AppClassLoader@42110406: [file:/Users/bigmeco/IdeaProjects/websiteResume/site/.kobweb/server/server.jar!/ch]
-2024-01-07 19:15:11.514 [main] WARN  ktor.application - API jar specified but does not exist! Please fix conf.yaml. Invalid path: "build/libs/website.jar"
-2024-01-07 19:15:11.540 [main] INFO  ktor.application - Application started in 0.071 seconds.
-2024-01-07 19:15:11.606 [main] INFO  ktor.application - Responding at http://0.0.0.0:8080
-2024-01-07 19:15:27.792 [eventLoopGroupProxy-4-2] DEBUG ktor.application - Client connected and is requesting kobweb status events.
-2024-01-07 19:15:29.007 [eventLoopGroupProxy-4-2] DEBUG ktor.application - Stopped sending kobweb status events, probably because client disconnected or server is shutting down. (ChannelWriteException: Cannot write to a channel)
-2024-01-07 19:48:11.769 [eventLoopGroupProxy-4-7] DEBUG ktor.application - Client connected and is requesting kobweb status events.
-2024-01-07 19:48:13.103 [eventLoopGroupProxy-4-8] DEBUG ktor.application - Client connected and is requesting kobweb status events.
-2024-01-07 19:48:13.283 [eventLoopGroupProxy-4-7] DEBUG ktor.application - Stopped sending kobweb status events, probably because client disconnected or server is shutting down. (ChannelWriteException: Cannot write to a channel)
-2024-01-07 19:48:22.403 [kotlinx.coroutines.DefaultExecutor] INFO  ktor.application - Kobweb server shutting down...
-2024-01-07 19:48:24.495 [kotlinx.coroutines.DefaultExecutor] INFO  ktor.application - Server finished shutting down.
+2024-01-07 20:44:47.909 [main] DEBUG ktor.application - Java Home: /Library/Java/JavaVirtualMachines/jdk-17.jdk/Contents
+2024-01-07 20:44:47.911 [main] DEBUG ktor.application - Class Loader: jdk.internal.loader.ClassLoaders$AppClassLoader@22d8cfe0: [file:/Users/bigmeco/IdeaProjects/websiteResume/site/.kobweb/server/server.jar!/ch]
+2024-01-07 20:44:47.921 [main] WARN  ktor.application - API jar specified but does not exist! Please fix conf.yaml. Invalid path: "build/libs/website.jar"
+2024-01-07 20:44:47.948 [main] INFO  ktor.application - Application started in 0.07 seconds.
+2024-01-07 20:44:48.024 [main] INFO  ktor.application - Responding at http://0.0.0.0:8080
+2024-01-07 20:45:00.204 [kotlinx.coroutines.DefaultExecutor] INFO  ktor.application - Kobweb server shutting down...
+2024-01-07 20:45:02.305 [kotlinx.coroutines.DefaultExecutor] INFO  ktor.application - Server finished shutting down.
