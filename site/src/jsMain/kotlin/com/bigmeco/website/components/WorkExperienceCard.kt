@@ -276,31 +276,6 @@ fun WorkExperienceCard() {
                 breakpoint = breakpoint
             )
         }
-        SpaseJob()
-        SimpleGrid(
-            numColumns = numColumns(base = 1, md = 2),
-            modifier = Modifier
-                .fillMaxWidth(
-                    if (breakpoint <= Breakpoint.MD) 100.percent
-                    else Res.Dimens.MAX_CARD_WIDTH.px
-                )
-                .borderRadius(r = Res.Dimens.BORDER_RADIUS.px)
-                .background(Res.Theme.BLACK.color)
-                .padding(leftRight = 12.px, topBottom = 28.px)
-        ) {
-            CompanyLogoSide(
-                Res.Image.BRABENS_DEV_PHOTO,
-                listOf(
-                )
-            )
-            CompanyInfoSide(
-                period = "Jun 2016 — Sep 2016",
-                position = "Android developer",
-                technologies = "Retrofit | Java | Android | XML",
-                description = "Development of highload projects.",
-                breakpoint = breakpoint
-            )
-        }
     }
 }
 
