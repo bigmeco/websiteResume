@@ -31,6 +31,7 @@ object Res {
         const val COMPAERO_PHOTO = "compaero.svg"
         const val SLONOVOZ_PHOTO = "slonovoz.svg"
         const val BRABENS_DEV_PHOTO = "brabens_dev.svg"
+        const val GIT_HUB_PHOTO = "github_name.svg"
     }
 
     object String {

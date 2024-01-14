@@ -4,6 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.rememberCoroutineScope
 import com.bigmeco.website.components.AnimatedCanvas
+import com.bigmeco.website.components.OpenSourceCard
 import com.bigmeco.website.components.ProfileCard
 import com.bigmeco.website.components.WorkExperienceCard
 import com.bigmeco.website.util.Res
@@ -79,7 +80,7 @@ fun HomePage() {
         contentAlignment = Alignment.Center
     ) {
         AnimatedCanvas(listOf(
-            Pair("https://play-lh.googleusercontent.com/Hu2na-3r4QYinz9uqkG7aVAB2ruldukmkQeDbZNHOAt9MjmDRrVbnMhbDFO1SKKijH8", "https://play.google.com/store/apps/details?id=com.electrocars.superapp&hl"),
+            Pair("https://play-lh.googleusercontent.com/Hu2na-3r4QYinz9uqkG7aVAB2ruldukmkQeDbZNHOAt9MjmDRrVbnMhbDFO1SKKijH8", "https://play.google.com/store/apps/details?id=com.electrocars.superapp"),
             Pair("https://play-lh.googleusercontent.com/2DmeQ8zbjSJwtP4Akv2N8S-VXx2mJnKZnIjaN3wGE8eHC2PdnPolxW8rm7CKvsU4WLo","https://play.google.com/store/apps/details?id=com.en.cars"),
             Pair("https://play-lh.googleusercontent.com/qIK0Gqh3LvgNu1GkOKKYIY6n9ek1tZEjOfXKbio78yb7Yocda4cVzNHXMODjVCxPew","https://play.google.com/store/apps/details?id=com.electrocars.evolute"),
             Pair("https://play-lh.googleusercontent.com/0Ar49Rbpf2aFN3ZlKrwAk8E_3KhZsFrA6h8-nhOefs4qIFKQO14r4brG-IAKdj3ecSE","https://play.google.com/store/apps/details?id=zaryad.service"),
@@ -97,6 +98,7 @@ fun HomePage() {
             Pair("https://play-lh.googleusercontent.com/2nTQBbRbcPjIhgwpEWrf_9kf03UMVunalpEu5Y37CozKQ0oMI_er8KjSdpx788yMsag","https://apk.support/app-ru/com.complead.repairy"),
             Pair("https://play-lh.googleusercontent.com/hjI3Cbsy88nxp-2u4s5oRJxqLFKM2t4h3Dhv7CR9_q6pMGm5WHkh8yPjBLyt7xjhI4A","https://apkcombo.com/ru/смартнарод-умный-дом/com.smartnarod/"),
             Pair("https://play-lh.googleusercontent.com/9CEXIWI4pG0I6TtBMhnmqbzmsDrbpt2dwur6vxoHVjj7T7WckIsD3ILdhyZk9Lj-hbii","https://apksfull.com/emercoin-secure-wallet/com.aspanta.emcsec"),
+            Pair("https://play-lh.googleusercontent.com/HDtIoIS3I1hAqP8EKAJWydGVOTC8oNmxQosiRJkEEEg4_2O85L-I7mjrkUkStmVxJ9k","https://apkcombo.com/ru/profi-service/com.vicecode.profiservice"),
         ),100.0,100.0,6.0,6.0)
         Column {
                 Box(Modifier.id(anchors[0])) {
@@ -104,12 +106,22 @@ fun HomePage() {
                 }
                 Box(Modifier.id(anchors[2])) {
                     WorkExperienceCard()
-            }
+                }
+            OpenSourceCard(listOf(
+                Pair("https://play-lh.googleusercontent.com/9UB15ocYn4K-21UqXtXGN9FHr95USH94K_v8IrTHlpdKQV7gTz5auOZ51WW66O_UrwqK",
+                    "https://play.google.com/store/apps/details?id=com.bigmeco.firstdatequestions"),
+                Pair("https://play-lh.googleusercontent.com/PEV6NY7X9ZFhOpewL3if2ctGRubGqp5exsRLegeyRYMlEVXuLKGSv_Urfrc5wVRBag",
+                    "https://play.google.com/store/apps/details?id=com.bigmeco.questconstructor"),
+                Pair("https://play-lh.googleusercontent.com/WxEKhhqc5HycgcrnreOt98phVVArZ0w8mqzD3YdY8tGx7TnMBJPArI2uC2b3itPf4gE3",
+                    "https://play.google.com/store/apps/details?id=com.bigmeco.bigi.kinotop"),
+                Pair("https://play-lh.googleusercontent.com/2VQyt58Khky-xONDW5PQdQr2f0oZk6z_TGf2aIvgEw6JILTXI0DS8aGCgLhBfq2DWw",
+                    "https://play.google.com/store/apps/details?id=bigi.fizika"),
+                Pair("https://raw.githubusercontent.com/bigmeco/websiteResume/master/docs/favicon.ico",
+                    "https://github.com/bigmeco/websiteResume"),
+                Pair("https://yt3.googleusercontent.com/ytc/APkrFKZR7E9Q1uYj6tU_QWXv_5GdFbCiA1QTtEtl1N9q0w",
+                    "https://github.com/bigmeco/TestCanvas"),
+            ))
+
         }
     }
 }
-
-//ref {
-//    canvasRef = it
-//    onDispose { }
-//}

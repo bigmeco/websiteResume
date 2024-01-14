@@ -31,7 +31,7 @@ fun WorkExperienceCard() {
     val breakpoint = rememberBreakpoint()
 
     Column(
-        modifier = Modifier.margin(top = 24.px, bottom = 64.px)
+        modifier = Modifier.margin(top = 24.px, bottom = 24.px)
             .background(Res.Theme.ROOT.color)
             .borderRadius(r = Res.Dimens.BORDER_RADIUS_GREEN.px)
             .boxShadow(
@@ -149,6 +149,8 @@ fun WorkExperienceCard() {
                         "https://play-lh.googleusercontent.com/2nTQBbRbcPjIhgwpEWrf_9kf03UMVunalpEu5Y37CozKQ0oMI_er8KjSdpx788yMsag",
                         "https://apk.support/app-ru/com.complead.repairy"
                     ),
+                    Pair("https://play-lh.googleusercontent.com/HDtIoIS3I1hAqP8EKAJWydGVOTC8oNmxQosiRJkEEEg4_2O85L-I7mjrkUkStmVxJ9k",
+                        "https://apkcombo.com/ru/profi-service/com.vicecode.profiservice"),
 
                     )
             )

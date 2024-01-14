@@ -159,9 +159,9 @@ fun AnimatedCanvas(imagesUrls: List<Pair<String, String>>, imageWidth: Double, i
                         movingImage.y += movingImage.speed
 
                         if (movingImage.speed > 0 && movingImage.y > canvas.height) {
-                            movingImage.y -= loadedImages.size * imageHeight + 100
+                            movingImage.y -= loadedImages.size * imageHeight + 120
                         } else if (movingImage.speed < 0 && movingImage.y + imageHeight < 0) {
-                            movingImage.y += loadedImages.size * imageHeight + 100
+                            movingImage.y += loadedImages.size * imageHeight + 120
                         }
                     }
 
