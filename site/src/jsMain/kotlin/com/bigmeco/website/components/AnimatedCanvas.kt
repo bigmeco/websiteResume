@@ -1,10 +1,13 @@
 package com.bigmeco.website.components
 
 import androidx.compose.runtime.*
+import com.bigmeco.website.util.Res
+import kotlinx.browser.document
 import kotlinx.browser.window
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
+import org.jetbrains.compose.web.css.CSSMediaQuery
 import org.jetbrains.compose.web.dom.Canvas
 import org.w3c.dom.CanvasRenderingContext2D
 import org.w3c.dom.HTMLCanvasElement
@@ -32,7 +35,12 @@ fun AnimatedCanvas(imagesUrls: List<Pair<String, String>>, imageWidth: Double, i
                 windowWidth = window.innerWidth
                 canvasRef?.let { canvas ->
                     canvas.width = window.innerWidth
-                    canvas.height = window.innerHeight
+                    canvas.height = window.innerHeight+1000
+                    console.log(document.documentElement?.scrollHeight)
+                    console.log(document.body?.scrollHeight?:"nun")
+                    console.log(document.body?.offsetHeight?:"nun")
+                    console.log(document.documentElement?.clientHeight?:"nun")
+                    console.log(window.innerHeight)
                 }
             }
         }
@@ -69,6 +77,7 @@ fun AnimatedCanvas(imagesUrls: List<Pair<String, String>>, imageWidth: Double, i
         }
     }
     val canvasAspectRatio = imageWidth / imageHeight
+    val gradient = "radial-gradient(circle, ${Res.Theme.GRADIENT_ONE.color}, ${Res.Theme.GRADIENT_TWO.color})" // Пример градиента
 
     Canvas(
         attrs = {
@@ -82,6 +91,12 @@ fun AnimatedCanvas(imagesUrls: List<Pair<String, String>>, imageWidth: Double, i
             style {
                 property("width", "100vw")
                 property("height", "100vw / $canvasAspectRatio")
+                property("background-image", gradient)
+                property("position", "fixed")
+                property("top", "0px")
+                property("left", "0px")
+                property("z-index", "-1") // z-index, чтобы холст был под другими элементами
+
             }
         }
     )

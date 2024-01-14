@@ -14,6 +14,7 @@ import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.graphics.Colors
 import com.varabyte.kobweb.compose.ui.modifiers.*
+import com.varabyte.kobweb.compose.ui.thenIf
 import com.varabyte.kobweb.silk.components.forms.Button
 import com.varabyte.kobweb.silk.components.forms.ButtonSize
 import com.varabyte.kobweb.silk.components.graphics.Image
@@ -33,6 +34,7 @@ fun TitleSide(
     Column(
         modifier = Modifier
             .fillMaxSize()
+
             .padding(all = 50.px),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = if (breakpoint <= Breakpoint.SM)
@@ -42,7 +44,6 @@ fun TitleSide(
             text = Res.String.NAME,
             modifier = Modifier
                 .margin(bottom = 12.px)
-                .fontFamily(Res.String.ROBOTO_CONDENSED)
                 .color(Res.Theme.ROOT.color)
                 .fontSize(50.px)
                 .fontWeight(FontWeight.Bold)
@@ -55,7 +56,6 @@ fun TitleSide(
             text = Res.String.PROFESSION,
             modifier = Modifier
                 .margin(bottom = 24.px)
-                .fontFamily(Res.String.ROBOTO_REGULAR)
                 .fontWeight(FontWeight.Normal)
                 .color(Colors.White)
                 .fontSize(18.px)
@@ -63,7 +63,14 @@ fun TitleSide(
         Surface(
             modifier = Modifier
                 .height(4.px)
-                .width(400.px)
+                .thenIf(
+                    condition = breakpoint > Breakpoint.MD,
+                    other = Modifier.width(400.px)
+                )
+                .thenIf(
+                    condition = breakpoint <= Breakpoint.MD,
+                    other = Modifier.width(200.px)
+                )
                 .margin(bottom = 24.px)
                 .boxShadow(
                     color = (Res.Theme.ROOT.color).toRgb().copy(alpha = 30),
@@ -79,7 +86,6 @@ fun TitleSide(
         ) {}
         SpanText(
             modifier = Modifier
-                .fontFamily(Res.String.ROBOTO_REGULAR)
                 .fontSize(14.px)
                 .color( Colors.White)
                 .opacity(80.percent)

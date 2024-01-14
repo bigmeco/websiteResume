@@ -1,9 +1,14 @@
 @font-face {
-  font-family: 'RobotoRegular';
-  src: url('/fonts/roboto_regular.ttf');
+  font-family: 'Regular';
+  src: url('./BrassMono-Regular.ttf');
 }
 
 @font-face {
-    font-family: 'RobotoCondensedBold';
-    src: url('/fonts/roboto_condensed_bold.ttf')
+    font-family: 'CondensedBold';
+    src: url('./BrassMono-Bold.ttf')
+}
+
+
+body {
+    font-family: 'CondensedBold', sans-serif;
 }

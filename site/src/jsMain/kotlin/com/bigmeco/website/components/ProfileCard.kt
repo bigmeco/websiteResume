@@ -15,6 +15,7 @@ import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 import com.varabyte.kobweb.silk.theme.colors.ColorMode
 import com.varabyte.kobweb.silk.theme.shapes.clip
 import org.jetbrains.compose.web.css.LineStyle.Companion.Solid
+import org.jetbrains.compose.web.css.dppx
 import org.jetbrains.compose.web.css.percent
 import org.jetbrains.compose.web.css.px
 import org.w3c.dom.clipboard.Clipboard
@@ -24,7 +25,7 @@ fun ProfileCard() {
     val breakpoint = rememberBreakpoint()
 
     Box(
-        modifier = Modifier
+        modifier = Modifier.margin(top = 64.px, bottom = 24.px)
             .background(Res.Theme.ROOT.color)
             .borderRadius(r = Res.Dimens.BORDER_RADIUS_GREEN.px)
             .boxShadow(
@@ -45,11 +46,7 @@ fun ProfileCard() {
                     condition = breakpoint > Breakpoint.MD,
                     other = Modifier.height(Res.Dimens.MAX_CARD_HEIGHT.px)
                 )
-                .boxShadow(
-                    color = Colors.Black.copy(alpha = 80),
-                    blurRadius = 40.px,
-                    spreadRadius = 40.px
-                )
+
                 .borderRadius(r = Res.Dimens.BORDER_RADIUS.px)
                 .background(Res.Theme.BLACK.color)
                 .padding(all = 12.px)

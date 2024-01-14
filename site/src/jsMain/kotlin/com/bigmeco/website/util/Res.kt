@@ -10,6 +10,7 @@ object Res {
         SOCIAL_ICON_BACKGROUND(color = Color.rgb(r = 54, g = 56, b = 54)),
         GRADIENT_ONE(color = Color.rgb(r = 24, g = 25, b = 24)),
         GRADIENT_TWO(color = Color.rgb(r = 40, g = 42, b = 40)),
+        TRANSPARENT(color = Color.argb(r = 40, g = 42, b = 40,a=0)),
     }
 
     object Icon {
@@ -23,6 +24,13 @@ object Res {
 
     object Image {
         const val PROFILE_PHOTO = "photo.png"
+        const val ELECTRO_CARS_PHOTO = "electro_cars.svg"
+        const val E_LEGION_PHOTO = "e_legion.svg"
+        const val VICE_CODE_PHOTO = "vice_code.svg"
+        const val BEAUIT_PHOTO = "beauit.svg"
+        const val COMPAERO_PHOTO = "compaero.svg"
+        const val SLONOVOZ_PHOTO = "slonovoz.svg"
+        const val BRABENS_DEV_PHOTO = "brabens_dev.svg"
     }
 
     object String {
@@ -30,8 +38,7 @@ object Res {
         const val PROFESSION = "Android (Kotlin) Developer"
         const val ABOUT_ME =
             "Hello, I am 27 years old and have been involved in software development for 11 years, including 8 years in commercial development. My primary focus has been on Kotlin development, and I also have experience with Python, Java, JavaScript, and C++."
-        const val ROBOTO_CONDENSED = "RobotoCondensedBold"
-        const val ROBOTO_REGULAR = "RobotoRegular"
+
     }
 
     object Dimens {

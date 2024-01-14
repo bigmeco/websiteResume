@@ -12,12 +12,21 @@ import com.varabyte.kobweb.silk.init.InitSilk
 import com.varabyte.kobweb.silk.init.InitSilkContext
 import com.varabyte.kobweb.silk.theme.colors.palette.button
 import org.jetbrains.compose.web.css.*
+import org.jetbrains.compose.web.dom.Style
 
 @App
 @Composable
 fun MyApp(content: @Composable () -> Unit) {
     SilkApp {
-        Surface(SmoothColorStyle.toModifier().minHeight(100.vh)) {
+        Style {
+            universal style {
+                property("font-family", "monospace")
+            }
+        }
+        Surface(SmoothColorStyle.toModifier().minHeight(100.vh).background(
+            Res.Theme.TRANSPARENT.color,
+
+            )) {
             content()
         }
     }
